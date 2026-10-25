@@ -13,7 +13,23 @@ Supabase, internacionalização e negociação ainda não foram implementados.
 
 - Node.js 24.18.1 (ver `.nvmrc`).
 - pnpm 11.18.0, fixado em `package.json`.
-- Nenhuma credencial ou serviço externo é necessário nesta etapa.
+- Docker (para `supabase start` local) — opcional nesta etapa.
+
+## Supabase local
+
+A integração usa `@supabase/ssr` com fábricas próprias (ADR-007):
+cliente de navegador (anon), cliente servidor por request com cookies
+e cliente admin `service_role` confinado a `server/utils`.
+
+1. Copie `.env.example` para `.env`.
+2. Rode `pnpm supabase start` (requer Docker) e
+   `pnpm supabase status` para obter `anon`/`service_role` locais.
+3. Preencha `NUXT_PUBLIC_SUPABASE_URL`, `NUXT_PUBLIC_SUPABASE_ANON_KEY`
+   e `NUXT_SUPABASE_SERVICE_ROLE_KEY` no `.env` — nunca commitar.
+   A chave `service_role` jamais usa prefixo `NUXT_PUBLIC_*`.
+
+Migrações versionadas ficam em `supabase/migrations/`; seeds em
+`supabase/seed.sql` contêm exclusivamente dados fictícios.
 
 ## Executar localmente
 

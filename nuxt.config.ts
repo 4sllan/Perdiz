@@ -9,6 +9,14 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: false },
   typescript: { strict: true },
+  runtimeConfig: {
+    // Somente servidor (Nitro). Nunca usar prefixo NUXT_PUBLIC_* aqui.
+    supabaseServiceRoleKey: '',
+    public: {
+      supabaseUrl: '',
+      supabaseAnonKey: '',
+    },
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'pt-BR' },

@@ -1,0 +1,4 @@
+-- Seeds do ambiente local da Perdiz.
+-- REGRA: somente dados fictícios de demonstração. Nunca inserir dados
+-- reais, credenciais ou qualquer informação pessoal verdadeira.
+-- Populado pelas tasks de catálogo (PDZ-013) em diante.
