@@ -76,10 +76,10 @@ inclusive a instalação limpa e os testes.
 
 ## Documentação e escopo
 
-- [Especificação técnica](docs%20/specs/perdiz-especificacao-tecnica.md)
+- [Especificação da fundação](docs/specs/perdiz-platform-foundation.md)
+- [Decisões de arquitetura (ADRs)](docs/adr)
 - [Processo SDD](.devin/sdd.md)
-- [Backlog e evidências](docs%20/tasks/perdiz-tasks.md)
+- [Backlog e evidências](docs/tasks/perdiz-tasks.md)
 
-A pasta `docs ` possui um espaço final; preservar o caminho e usar aspas
-ao referenciá-la no terminal. Decisões de domínio dependem de ADRs aceitos.
+Decisões de domínio dependem de ADRs aceitos.
 Nenhuma configuração desta fundação habilita pagamentos ou operações reais.
