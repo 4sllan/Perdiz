@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f3f0e7;
+  --color-ink: #26372b;
+  --color-muted: #566050;
+  --color-accent: #a33f24;
+  --color-line: #d1d3c5;
+  --font-sans: 'Avenir Next', Avenir, 'Trebuchet MS', sans-serif;
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
+  --animate-arrive: arrive 700ms ease-out both;
+
+  @keyframes arrive {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    color: var(--color-ink);
+    background: var(--color-paper);
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 6px;
+  }
+}
+
+@utility foundation-background {
+  background:
+    radial-gradient(ellipse at 90% 35%, #dae0cd80, transparent 55%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent calc(25% - 1px),
+      #26372b06 calc(25% - 1px),
+      #26372b06 25%
+    );
+}
