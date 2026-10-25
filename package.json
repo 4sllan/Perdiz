@@ -9,11 +9,11 @@
     "pnpm": "11.18.0"
   },
   "scripts": {
-    "dev": "nuxt dev --host 127.0.0.1",
+    "dev": "nuxt dev",
     "build": "nuxt build",
-    "preview": "nuxt preview --host 127.0.0.1",
+    "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "nuxt typecheck && tsc --project tsconfig.tools.json",
@@ -23,17 +23,22 @@
     "test:e2e:install": "playwright install chromium"
   },
   "dependencies": {
+    "@nuxt/fonts": "1.1.0",
+    "@nuxt/icon": "2.6.0",
     "nuxt": "4.6.2",
     "vue": "3.5.44",
     "vue-router": "5.4.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "1.17.0",
+    "@iconify-json/lucide": "1.2.147",
+    "@nuxt/eslint-config": "1.17.0",
+    "@nuxt/test-utils": "4.3.4",
     "@playwright/test": "1.64.1",
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "24.19.2",
     "eslint": "10.13.0",
     "prettier": "3.9.10",
+    "prettier-plugin-tailwindcss": "0.8.1",
     "tailwindcss": "4.3.3",
     "typescript": "5.9.3",
     "vitest": "5.0.5",

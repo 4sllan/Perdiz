@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --color-paper: #f3f0e7;
@@ -6,8 +6,8 @@
   --color-muted: #566050;
   --color-accent: #a33f24;
   --color-line: #d1d3c5;
-  --font-sans: 'Avenir Next', Avenir, 'Trebuchet MS', sans-serif;
-  --font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, serif;
+  --font-sans: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, serif;
   --animate-arrive: arrive 700ms ease-out both;
 
   @keyframes arrive {

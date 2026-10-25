@@ -1,5 +1,17 @@
 {
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "all"
+  "printWidth": 100,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "overrides": [
+    {
+      "files": ["*.pcss", "*.css", "*.scss"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
