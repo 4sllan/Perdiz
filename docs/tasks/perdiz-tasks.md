@@ -32,7 +32,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 
 ### PDZ-001 — Normalizar repositório e executar validações existentes
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §2.6, §18/F0
 - Dependências: nenhuma
 - Entregáveis: working tree revisado e commitado; `pnpm install`
@@ -42,30 +42,40 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: todos os comandos passam em ambiente limpo; falhas
   corrigidas ou documentadas com decisão.
 - Testes: os próprios comandos.
+- Evidências (25/10/2026): `pnpm format:check`, `pnpm lint`,
+  `pnpm typecheck`, `pnpm test` (1/1), `pnpm build` (~5s) verdes.
+  `pnpm test:e2e:install` baixou Chromium; `pnpm test:e2e` 2/2
+  (chromium + mobile-chromium). Servidor dev órfão (PID 10231) que
+  segurava lock do `.nuxt` foi encerrado. `eslint.config.mjs`
+  reformatado conforme Prettier do projeto.
 
 ### PDZ-002 — Consolidar documentação e corrigir README
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §2.6.1, §2.6.8; ADR-011
 - Dependências: aceite de ADR-011
 - Entregáveis: remoção de `docs /` (vazio); `.prettierignore`
   atualizado; README com links corretos para spec/ADRs/tasks e estado
   real do projeto.
 - Aceite: `pnpm format:check` verde; nenhum link quebrado.
+- Evidências (25/10/2026): `docs /` removido; `.prettierignore` passa
+  a ignorar `docs/`; README referencia spec, `docs/adr/` e backlog.
 
 ### PDZ-003 — Aceitar ADRs
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §19
 - Dependências: nenhuma
 - Entregáveis: ADR-001…012 revisados; status alterado para
   `Aceito`/`Rejeitado` com registro do responsável; divergências com a
   spec resolvidas na spec.
 - Aceite: nenhum ADR em `Proposta`.
+- Evidências (25/10/2026): ADR-001 a ADR-012 marcados como `Aceito`
+  pelo responsável.
 
 ### PDZ-004 — Configurar Supabase local e clientes
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §13.1; ADR-007
 - Dependências: PDZ-001, ADR-007
 - Entregáveis: `supabase/config.toml` inicializado; `.env.example` sem
@@ -74,16 +84,30 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: `supabase start` + reset local reproduzível; nenhuma chave
   privilegiada em bundle ou `NUXT_PUBLIC_*`; seeds só fictícios.
 - Testes: varredura de bundle por `service_role`; smoke de conexão.
+- Evidências (25/10/2026): `@supabase/ssr` 0.12.7 +
+  `@supabase/supabase-js` 2.118.0 + CLI `supabase` 2.121.0 instalados;
+  `supabase start` sobe stack e seed executa; REST API responde 200;
+  `server/utils/supabase.ts` (cliente por request + admin service) e
+  `app/composables/useSupabaseClient.ts` criados; `.env.example` sem
+  valores; `.env` local preenchido e gitignored. Ressalva: Inbucket
+  desabilitado em `config.toml` — health check do container falha na
+  imagem atual; signup local já não exige confirmação
+  (`enable_confirmations = false`). Revisitar na PDZ-011.
 
 ### PDZ-005 — CI e ambientes
 
-- Status: pendente
+- Status: em andamento
 - Origem: spec §13.5; ADR-012
 - Dependências: PDZ-001, PDZ-004
 - Entregáveis: workflow CI (lint, format:check, typecheck, unit,
   integration com Supabase local, build); E2E em job separado; envs
   local/staging definidos.
 - Aceite: pipeline verde em PR; job E2E executa em Chromium cacheado.
+- Evidências (25/10/2026): `.github/workflows/ci.yml` criado com jobs
+  `checks` (lint/format/typecheck/unit/build + varredura de
+  service_role no bundle), `supabase` (stack local) e `e2e`
+  (Playwright). Pendente: primeiro push/execução remota para fechar
+  aceite.
 
 ---
 
