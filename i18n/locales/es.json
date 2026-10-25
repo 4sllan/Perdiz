@@ -1,0 +1,87 @@
+{
+  "app": {
+    "tag": "PROTOTIPO / 001",
+    "homeAria": "Perdiz, inicio"
+  },
+  "nav": {
+    "skipToContent": "Ir al contenido",
+    "markets": "Mercados",
+    "portfolio": "Cartera",
+    "activity": "Actividad",
+    "profile": "Perfil",
+    "admin": "Administración",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión"
+  },
+  "locale": {
+    "label": "Idioma"
+  },
+  "simulation": {
+    "badge": "SIMULACIÓN",
+    "notice": "Modo demostración — sin dinero real",
+    "detail": "Sin depósitos, retiros ni saldo canjeable."
+  },
+  "home": {
+    "kicker": "OBSERVAR. CUESTIONAR. EXPLORAR.",
+    "titleLine1": "El futuro empieza",
+    "titleLine2": "con una pregunta.",
+    "lead": "Estamos construyendo un espacio independiente para explorar mercados de predicción. Con reglas transparentes y operaciones completamente ficticias.",
+    "status": "Fundación en desarrollo",
+    "note": "Los mercados, las cuentas y la negociación aún no están disponibles."
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Crear cuenta",
+    "logout": "Cerrar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "Olvidé mi contraseña",
+    "resetPassword": "Restablecer contraseña"
+  },
+  "markets": {
+    "title": "Mercados",
+    "search": "Buscar mercados",
+    "empty": "No se encontraron mercados.",
+    "closesAt": "Cierra el",
+    "volume": "Volumen simulado",
+    "probability": "Probabilidad"
+  },
+  "orderbook": {
+    "buy": "Comprar",
+    "sell": "Vender",
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "total": "Total",
+    "spread": "Diferencial"
+  },
+  "wallet": {
+    "title": "Cartera",
+    "available": "Disponible",
+    "reserved": "Reservado",
+    "positions": "En posiciones",
+    "demoCredits": "créditos de demostración",
+    "reset": "Restablecer saldo de demostración",
+    "unavailable": "No disponible en el prototipo"
+  },
+  "admin": {
+    "title": "Administración",
+    "markets": "Mercados",
+    "categories": "Categorías",
+    "translations": "Traducciones",
+    "users": "Usuarios",
+    "audit": "Auditoría",
+    "settings": "Parámetros"
+  },
+  "states": {
+    "loading": "Cargando…",
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "offline": "Reconectando…",
+    "empty": "Aún no hay nada por aquí."
+  },
+  "errors": {
+    "marketNotOpen": "Este mercado no está abierto para negociar.",
+    "insufficientFunds": "Saldo de demostración insuficiente.",
+    "forbidden": "No tienes permiso para esta acción.",
+    "rateLimited": "Demasiados intentos. Espera un momento."
+  }
+}

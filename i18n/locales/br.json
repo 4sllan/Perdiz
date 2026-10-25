@@ -1,0 +1,87 @@
+{
+  "app": {
+    "tag": "PROTÓTIPO / 001",
+    "homeAria": "Perdiz, início"
+  },
+  "nav": {
+    "skipToContent": "Ir para o conteúdo",
+    "markets": "Mercados",
+    "portfolio": "Carteira",
+    "activity": "Atividade",
+    "profile": "Perfil",
+    "admin": "Administração",
+    "login": "Entrar",
+    "logout": "Sair"
+  },
+  "locale": {
+    "label": "Idioma"
+  },
+  "simulation": {
+    "badge": "SIMULAÇÃO",
+    "notice": "Modo demonstração — sem dinheiro real",
+    "detail": "Sem depósitos, saques ou saldo resgatável."
+  },
+  "home": {
+    "kicker": "OBSERVAR. QUESTIONAR. EXPLORAR.",
+    "titleLine1": "O futuro começa",
+    "titleLine2": "com uma pergunta.",
+    "lead": "Estamos construindo um espaço independente para explorar mercados de previsão. Com transparência nas regras e operações inteiramente fictícias.",
+    "status": "Fundação em desenvolvimento",
+    "note": "Mercados, contas e negociação ainda não estão disponíveis."
+  },
+  "auth": {
+    "login": "Entrar",
+    "register": "Criar conta",
+    "logout": "Sair",
+    "email": "E-mail",
+    "password": "Senha",
+    "forgotPassword": "Esqueci a senha",
+    "resetPassword": "Redefinir senha"
+  },
+  "markets": {
+    "title": "Mercados",
+    "search": "Buscar mercados",
+    "empty": "Nenhum mercado encontrado.",
+    "closesAt": "Encerra em",
+    "volume": "Volume simulado",
+    "probability": "Probabilidade"
+  },
+  "orderbook": {
+    "buy": "Comprar",
+    "sell": "Vender",
+    "price": "Preço",
+    "quantity": "Quantidade",
+    "total": "Total",
+    "spread": "Spread"
+  },
+  "wallet": {
+    "title": "Carteira",
+    "available": "Disponível",
+    "reserved": "Reservado",
+    "positions": "Em posições",
+    "demoCredits": "créditos de demonstração",
+    "reset": "Reiniciar saldo de demonstração",
+    "unavailable": "Indisponível no protótipo"
+  },
+  "admin": {
+    "title": "Administração",
+    "markets": "Mercados",
+    "categories": "Categorias",
+    "translations": "Traduções",
+    "users": "Usuários",
+    "audit": "Auditoria",
+    "settings": "Parâmetros"
+  },
+  "states": {
+    "loading": "Carregando…",
+    "error": "Algo deu errado. Tente novamente.",
+    "offline": "Reconectando…",
+    "empty": "Nada por aqui ainda."
+  },
+  "errors": {
+    "marketNotOpen": "Este mercado não está aberto para negociação.",
+    "insufficientFunds": "Saldo de demonstração insuficiente.",
+    "forbidden": "Você não tem permissão para esta ação.",
+    "rateLimited": "Muitas tentativas. Aguarde um instante."
+  }
+}

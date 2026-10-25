@@ -1,0 +1,87 @@
+{
+  "app": {
+    "tag": "PROTOTYPE / 001",
+    "homeAria": "Perdiz, home"
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "markets": "Markets",
+    "portfolio": "Portfolio",
+    "activity": "Activity",
+    "profile": "Profile",
+    "admin": "Administration",
+    "login": "Sign in",
+    "logout": "Sign out"
+  },
+  "locale": {
+    "label": "Language"
+  },
+  "simulation": {
+    "badge": "SIMULATION",
+    "notice": "Demo mode — no real money",
+    "detail": "No deposits, withdrawals or redeemable balance."
+  },
+  "home": {
+    "kicker": "OBSERVE. QUESTION. EXPLORE.",
+    "titleLine1": "The future begins",
+    "titleLine2": "with a question.",
+    "lead": "We are building an independent space to explore prediction markets. With transparent rules and entirely fictitious operations.",
+    "status": "Foundation under development",
+    "note": "Markets, accounts and trading are not available yet."
+  },
+  "auth": {
+    "login": "Sign in",
+    "register": "Create account",
+    "logout": "Sign out",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password",
+    "resetPassword": "Reset password"
+  },
+  "markets": {
+    "title": "Markets",
+    "search": "Search markets",
+    "empty": "No markets found.",
+    "closesAt": "Closes",
+    "volume": "Simulated volume",
+    "probability": "Probability"
+  },
+  "orderbook": {
+    "buy": "Buy",
+    "sell": "Sell",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total",
+    "spread": "Spread"
+  },
+  "wallet": {
+    "title": "Wallet",
+    "available": "Available",
+    "reserved": "Reserved",
+    "positions": "In positions",
+    "demoCredits": "demo credits",
+    "reset": "Reset demo balance",
+    "unavailable": "Unavailable in the prototype"
+  },
+  "admin": {
+    "title": "Administration",
+    "markets": "Markets",
+    "categories": "Categories",
+    "translations": "Translations",
+    "users": "Users",
+    "audit": "Audit",
+    "settings": "Settings"
+  },
+  "states": {
+    "loading": "Loading…",
+    "error": "Something went wrong. Please try again.",
+    "offline": "Reconnecting…",
+    "empty": "Nothing here yet."
+  },
+  "errors": {
+    "marketNotOpen": "This market is not open for trading.",
+    "insufficientFunds": "Insufficient demo balance.",
+    "forbidden": "You do not have permission for this action.",
+    "rateLimited": "Too many attempts. Please wait a moment."
+  }
+}
