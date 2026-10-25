@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NUXT_PUBLIC_SUPABASE_URL: http://127.0.0.1:54321
+  NUXT_PUBLIC_SUPABASE_ANON_KEY: ci-anon-placeholder
+  NUXT_SUPABASE_SERVICE_ROLE_KEY: ci-service-placeholder
+
+jobs:
+  checks:
+    name: Lint, types, unit e build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: ESLint
+        run: pnpm exec eslint .
+
+      - name: Prettier
+        run: pnpm format:check
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Testes unitários
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+
+      - name: Verificar ausência de service_role no bundle
+        run: |
+          if grep -r "ci-service-placeholder" .output/public .output/server 2>/dev/null; then
+            echo "service_role vazou para o bundle"
+            exit 1
+          fi
+
+  supabase:
+    name: Supabase local
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.121.0
+
+      - name: Iniciar stack local
+        run: supabase start
+
+      - name: Status
+        run: supabase status
+
+  e2e:
+    name: Playwright
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Instalar Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: E2E
+        run: pnpm test:e2e
