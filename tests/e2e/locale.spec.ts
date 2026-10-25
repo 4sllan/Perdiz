@@ -43,9 +43,7 @@ test.describe('locale detection and routes', () => {
     }
   })
 
-  test('redirects unprefixed paths preserving path and query', async ({
-    request,
-  }) => {
+  test('redirects unprefixed paths preserving path and query', async ({ request }) => {
     const response = await request.get('/mercados?cat=x', {
       maxRedirects: 0,
       headers: { 'Accept-Language': 'en-US' },

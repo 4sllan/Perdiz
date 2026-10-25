@@ -115,7 +115,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 
 ### PDZ-006 — Instalar e configurar PrimeVue
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §4
 - Dependências: PDZ-001
 - Entregáveis: `primevue`, `@primeuix/themes`,
@@ -124,10 +124,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
   auto-registrados definida.
 - Aceite: componentes renderizam em SSR sem erros de hidratação;
   bundle sem imports globais desnecessários.
+- Evidências (25/10/2026): `primevue`/`@primevue/nuxt-module` 4.5.5 + `@primevue/themes` 4.5.4 instalados (linha MIT — v5 adotou licença comercial PrimeUI; decisão do responsável de permanecer na gratuita). Módulo configurado com `cssLayer` e preset próprio; `Select` renderiza em SSR (E2E verde).
 
 ### PDZ-007 — Preset de tema Perdiz + ponte Tailwind
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §4.1, §5.2, §6; ADR-005, ADR-006
 - Dependências: PDZ-006, ADR-005
 - Entregáveis: `perdiz.preset.ts` com mapa de tokens da marca;
@@ -136,10 +137,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: `Button`, `InputText`, `DataTable` exibem paleta Perdiz;
   utilitário Tailwind ajusta layout de componente PrimeVue sem
   `!important`; zero override global de `p-*`.
+- Evidências (25/10/2026): `app/assets/theme/perdiz.preset.ts` com mapa ADR-005 (primary=accent, surface=paper, text=ink/muted, focus=accent); `@import "tailwindcss-primeui"`; camadas `theme, base, primevue, components, utilities`; tokens `--color-buy/--color-sell`.
 
 ### PDZ-008 — Configurar `@nuxtjs/i18n` e rotas localizadas
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §7
 - Dependências: PDZ-001
 - Entregáveis: módulo com `strategy: 'prefix'`; locales `br/us/pt/es`;
@@ -148,10 +150,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: `/` redireciona por `Accept-Language` sem loop; rotas
   prefixadas funcionam em SSR; cookie persiste e vence detecção.
 - Testes: E2E de redirect para `pt-BR`, `en-US`, idioma não suportado.
+- Evidências (25/10/2026): `@nuxtjs/i18n` 10.6.0 com `strategy: prefix`, locales br/us/pt/es, cookie `perdiz_locale`, fallback /br. `redirectOn: root` (o modo all redirecionava rotas prefixadas — bug registrado); `server/middleware/locale-redirect.ts` preserva path/query em rotas sem prefixo.
 
 ### PDZ-009 — Layout base, `LocaleSwitcher`, `SimulationBanner`
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §5.4, §7.2, §15
 - Dependências: PDZ-007, PDZ-008
 - Entregáveis: `layouts/default.vue` (header, nav, banner, footer);
@@ -161,10 +164,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: troca de idioma preserva contexto; aviso de simulação
   visível em todas as rotas; skip-link e foco funcionam.
 - Testes: E2E de troca de locale; chaves i18n; a11y básica teclado.
+- Evidências (25/10/2026): `layouts/default.vue` com header, `LocaleSwitcher` (Select PrimeVue), `SimulationBanner` e página inicial localizada; aviso de simulação em toda rota; skip-link mantido.
 
 ### PDZ-010 — Traduções de interface e teste de chaves
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §7.4
 - Dependências: PDZ-008
 - Entregáveis: chaves semânticas para navegação, auth, wallet,
@@ -175,6 +179,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 ---
 
 ## Fase 2 — Autenticação e autorização
+- Evidências (25/10/2026): 4 arquivos `i18n/locales/*.json` com chaves semânticas; `tests/unit/i18n.test.ts` valida paridade e não-vazios — 10/10 unit. E2E `locale.spec.ts`: 16/16 (redirects, prefixadas respeitadas, conteúdo por locale, desktop+mobile).
 
 ### PDZ-011 — Auth, perfil e preferências
 

@@ -1,5 +1,5 @@
-import { definePreset } from '@primeuix/themes'
-import Aura from '@primeuix/themes/aura'
+import { definePreset } from '@primevue/themes'
+import Aura from '@primevue/themes/aura'
 
 /**
  * Preset de tema da Perdiz (ADR-005): mapeia os tokens de marca

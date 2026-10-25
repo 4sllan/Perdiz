@@ -15,6 +15,13 @@ Supabase, internacionalização e negociação ainda não foram implementados.
 - pnpm 11.18.0, fixado em `package.json`.
 - Docker (para `supabase start` local) — opcional nesta etapa.
 
+## PrimeVue
+
+Fixado em `4.5.x` (licença MIT). O PrimeVue 5 adotou licença comercial
+PrimeUI que exige key; não atualizar para a major 5 sem decisão sobre
+custo/elegibilidade. Tema próprio em `app/assets/theme/perdiz.preset.ts`,
+conectado ao Tailwind via `tailwindcss-primeui`.
+
 ## Supabase local
 
 A integração usa `@supabase/ssr` com fábricas próprias (ADR-007):

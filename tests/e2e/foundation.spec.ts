@@ -6,7 +6,7 @@ test('renders the foundation and simulation notice with SSR', async ({ page, req
   expect(response.status()).toBe(200)
   expect(await response.text()).toContain('sem dinheiro real')
 
-  await page.goto('/')
+  await page.goto('/br')
   await expect(page.getByRole('heading', { level: 1, name: /O futuro começa/ })).toBeVisible()
   await expect(
     page.getByText('Modo demonstração — sem dinheiro real', { exact: true }),

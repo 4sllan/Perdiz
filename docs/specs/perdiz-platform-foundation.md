@@ -120,7 +120,7 @@ integração, CI, arquivos de ambiente ou qualquer código de domínio.
 | prettier / prettier-plugin-tailwindcss | 3.9.10 / 0.8.1 | |
 
 **Ausentes (não instalados):** PrimeVue, `@primevue/nuxt-module`,
-`@primeuix/themes`, `tailwindcss-primeui`, `@nuxtjs/i18n`,
+`@primevue/themes`, `tailwindcss-primeui`, `@nuxtjs/i18n`,
 `@nuxtjs/supabase`, `@supabase/ssr`, `@supabase/supabase-js`, `zod`,
 Pinia, qualquer ORM/query builder.
 
@@ -129,7 +129,7 @@ Pinia, qualquer ORM/query builder.
 | Pacote | Última versão |
 | --- | --- |
 | primevue / @primevue/nuxt-module | 5.0.4 / 5.0.4 |
-| @primeuix/themes | 3.1.0 |
+| @primeuix/themes (pacote de temas da v5) | 3.1.0 |
 | tailwindcss-primeui | 0.6.1 |
 | @nuxtjs/i18n | 10.6.0 |
 | @nuxtjs/supabase | 2.1.0 |
@@ -140,6 +140,13 @@ Versões exatas devem ser fixadas no momento da instalação (`save-exact`
 já está ativo no `.npmrc`), preferindo versões com mais de 7 dias de
 publicação. A compatibilidade do módulo PrimeVue com Nuxt 4.6 deve ser
 confirmada na documentação da versão instalada antes da configuração.
+
+**Nota de licença (atualizada em 25/10/2026):** o PrimeVue 5 adotou
+licença comercial PrimeUI (key obrigatória, Community elegível ou
+Commercial paga). O projeto ficou pinado na linha **4.5.x (MIT)** —
+`primevue`/`@primevue/nuxt-module` 4.5.5 + `@primevue/themes` 4.5.4 —
+decisão do responsável de seguir na versão gratuita. Upgrade para a
+major 5 exige revisão desta decisão e desta spec.
 
 ### 2.5 Identidade visual já estabelecida
 
@@ -305,7 +312,7 @@ vazias.
 
 ### 4.1 Instalação e configuração
 
-- Dependências: `primevue` + `@primeuix/themes` (runtime);
+- Dependências: `primevue` + `@primevue/themes` (runtime);
   `@primevue/nuxt-module` (dev). Versões fixadas em `package.json`.
 - Módulo registrado em `nuxt.config.ts` com chave `primevue`; o módulo
   auto-registra componentes com tree-shaking — não importar componentes
@@ -428,7 +435,7 @@ Regras de convivência:
    (margem, largura) sem `!important` e sem disputar estilos internos.
 3. **Proibido:** sobrescrever classes internas `p-*` com CSS global;
    usar `!` em utilitários; dois temas concorrentes; importar CSS de
-   preset legado (v3) junto ao `@primeuix/themes`.
+   preset legado (v3) junto ao `@primevue/themes`.
 4. **Ajustes internos de componente** via API `pt` (pass-through)
    versionada no código, ou via tokens do preset — nunca seletores
    globais frágeis.

@@ -25,11 +25,11 @@
   "dependencies": {
     "@nuxt/fonts": "1.1.0",
     "@nuxt/icon": "2.6.0",
-    "@primeuix/themes": "3.0.1",
+    "@primevue/themes": "4.5.4",
     "@supabase/ssr": "0.12.7",
     "@supabase/supabase-js": "2.118.0",
     "nuxt": "4.6.2",
-    "primevue": "5.0.2",
+    "primevue": "4.5.5",
     "vue": "3.5.44",
     "vue-router": "5.4.0"
   },
@@ -39,7 +39,7 @@
     "@nuxt/test-utils": "4.3.4",
     "@nuxtjs/i18n": "10.6.0",
     "@playwright/test": "1.64.1",
-    "@primevue/nuxt-module": "5.0.2",
+    "@primevue/nuxt-module": "4.5.5",
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "24.19.2",
     "eslint": "10.13.0",
