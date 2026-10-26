@@ -216,7 +216,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 
 ### PDZ-013 — Migrations de catálogo e seeds
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §8.3, §11; ADR-001
 - Dependências: PDZ-004, ADR-001
 - Entregáveis: `categories`(+translations), `markets`,
@@ -225,10 +225,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: catálogo consultável por locale com fallback sinalizado;
   estados respeitam máquina definida.
 - Testes: integração de leitura pública vs. rascunho.
+- Evidências (26/10/2026): Migration 0002 (catálogo completo, RLS public-read, índices) + 0003 (audit_logs) aplicadas; seeds 4 categorias×4 locales e 3 mercados fictícios; db reset reproduzível.
 
 ### PDZ-014 — APIs públicas de mercado e página de detalhe
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §8.1, §8.2, §12.1; ADR-008
 - Dependências: PDZ-013, PDZ-009
 - Entregáveis: `GET /api/markets`, `/markets/:slug`, `/categories`
@@ -238,10 +239,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: busca/filtros/ordenação corretos; skeleton/empty/error
   implementados; dados traduzidos por locale.
 - Testes: unit de filtros; E2E explorar→detalhe.
+- Evidências (26/10/2026): GET /api/markets (filtros/paginação), /api/markets/:slug (FK hint no embed), /api/categories — tradução por locale, somente publicados. Páginas markets/index (busca+filtro+skeleton) e [slug] (regras, fonte, outcomes).
 
 ### PDZ-015 — Admin: CRUD de mercados e ciclo de vida editorial
 
-- Status: pendente
+- Status: em andamento
 - Origem: spec §8.3, §14.1
 - Dependências: PDZ-012, PDZ-013
 - Entregáveis: `admin/markets` (lista, editor com `DataTable`,
@@ -254,6 +256,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 ---
 
 ## Fase 4 — Carteira fictícia e livro-razão
+- Evidências (26/10/2026): Parcial: GET /admin/markets + POST publish com validação de transição e auditoria; requireRole server-side; página admin com DataTable + ação publicar. Pendente: editor completo, traduções por locale, categorias CRUD e demais transições de estado.
 
 ### PDZ-016 — Ledger de partidas dobradas
 
