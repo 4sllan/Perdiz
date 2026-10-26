@@ -36,7 +36,11 @@
     "email": "E-mail",
     "password": "Senha",
     "forgotPassword": "Esqueci a senha",
-    "resetPassword": "Redefinir senha"
+    "resetPassword": "Redefinir senha",
+    "resetSent": "Se o e-mail existir, enviaremos instruções de redefinição.",
+    "errors": {
+      "invalidCredentials": "E-mail ou senha inválidos."
+    }
   },
   "markets": {
     "title": "Mercados",

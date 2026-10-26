@@ -36,7 +36,11 @@
     "email": "Correo electrónico",
     "password": "Contraseña",
     "forgotPassword": "Olvidé mi contraseña",
-    "resetPassword": "Restablecer contraseña"
+    "resetPassword": "Restablecer contraseña",
+    "resetSent": "Si el correo existe, enviaremos instrucciones de restablecimiento.",
+    "errors": {
+      "invalidCredentials": "Correo o contraseña inválidos."
+    }
   },
   "markets": {
     "title": "Mercados",

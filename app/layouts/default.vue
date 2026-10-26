@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const { user, signOut } = useAuth()
 </script>
 
 <template>
@@ -20,6 +21,13 @@ const { t } = useI18n()
         perdiz<span class="text-accent" aria-hidden="true">.</span>
       </NuxtLinkLocale>
       <div class="flex items-center gap-4">
+        <template v-if="user">
+          <span class="text-muted hidden text-sm sm:inline">{{ user.email }}</span>
+          <Button :label="t('auth.logout')" size="small" text @click="signOut" />
+        </template>
+        <NuxtLinkLocale v-else class="text-accent text-sm font-semibold" to="/auth/login">{{
+          t('auth.login')
+        }}</NuxtLinkLocale>
         <LayoutLocaleSwitcher />
         <span class="text-muted text-[0.6rem] font-bold tracking-[0.14em] sm:text-[0.7rem]">{{
           t('app.tag')

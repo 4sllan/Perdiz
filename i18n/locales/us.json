@@ -36,7 +36,11 @@
     "email": "Email",
     "password": "Password",
     "forgotPassword": "Forgot password",
-    "resetPassword": "Reset password"
+    "resetPassword": "Reset password",
+    "resetSent": "If the email exists, we will send reset instructions.",
+    "errors": {
+      "invalidCredentials": "Invalid email or password."
+    }
   },
   "markets": {
     "title": "Markets",
