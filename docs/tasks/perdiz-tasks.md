@@ -183,7 +183,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 
 ### PDZ-011 — Auth, perfil e preferências
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §8.4, §13.2; ADR-007
 - Dependências: PDZ-004, PDZ-008
 - Entregáveis: páginas `auth/*` (login, cadastro, reset) localizadas;
@@ -194,10 +194,11 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 - Aceite: fluxo completo signup→verificação→login→logout; `PATCH
   /me/preferences` persiste e reflete na UI.
 - Testes: E2E auth; integração de precedência de locale.
+- Evidências (26/10/2026): Migration 0001 aplicada (profiles/user_roles/user_preferences + trigger + has_role + RLS). Middleware auth SSR, /api/me, PATCH preferences (zod). Páginas auth + guards; e2e auth verde (18/18 total). Signup local sem confirmação — inbucket desabilitado (revisitar e-mail na PDZ-011 futura/staging).
 
 ### PDZ-012 — Papéis e RLS de conta
 
-- Status: pendente
+- Status: concluída
 - Origem: spec §13.2, §13.3; ADR-010
 - Dependências: PDZ-011
 - Entregáveis: `user_roles` com policies; função `has_role()`;
@@ -211,6 +212,7 @@ dinheiro real, pagamentos, Pix, depósitos ou saques.
 ---
 
 ## Fase 3 — Mercados e catálogo
+- Evidências (26/10/2026): RLS deny-by-default: usuário lê/edita só o próprio; user_roles sem escrita via authenticated (concessão só via service auditada); guard admin verificado em /api/me; teste E2E confirma não-admin fora de /br/admin e unauth→login.
 
 ### PDZ-013 — Migrations de catálogo e seeds
 
