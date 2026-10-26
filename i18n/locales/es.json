@@ -48,7 +48,13 @@
     "empty": "No se encontraron mercados.",
     "closesAt": "Cierra el",
     "volume": "Volumen simulado",
-    "probability": "Probabilidad"
+    "probability": "Probabilidad",
+    "allCategories": "Todas las categorías",
+    "outcomes": "Resultados",
+    "resolutionSource": "Fuente de resolución",
+    "viewSource": "Ver fuente",
+    "resolutionRules": "Reglas de resolución",
+    "orderbookSoon": "Negociación simulada pronto — libro de órdenes en la Fase 5."
   },
   "orderbook": {
     "buy": "Comprar",
@@ -74,7 +80,14 @@
     "translations": "Traducciones",
     "users": "Usuarios",
     "audit": "Auditoría",
-    "settings": "Parámetros"
+    "settings": "Parámetros",
+    "publish": "Publicar",
+    "table": {
+      "slug": "Slug",
+      "title": "Título",
+      "status": "Estado",
+      "actions": "Acciones"
+    }
   },
   "states": {
     "loading": "Cargando…",
@@ -87,5 +100,15 @@
     "insufficientFunds": "Saldo de demostración insuficiente.",
     "forbidden": "No tienes permiso para esta acción.",
     "rateLimited": "Demasiados intentos. Espera un momento."
+  },
+  "marketStatus": {
+    "draft": "Borrador",
+    "review": "En revisión",
+    "open": "Abierto",
+    "paused": "Pausado",
+    "closed": "Cerrado",
+    "resolving": "En resolución",
+    "resolved": "Resuelto",
+    "cancelled": "Cancelado"
   }
 }

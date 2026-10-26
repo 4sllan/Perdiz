@@ -48,7 +48,13 @@
     "empty": "No markets found.",
     "closesAt": "Closes",
     "volume": "Simulated volume",
-    "probability": "Probability"
+    "probability": "Probability",
+    "allCategories": "All categories",
+    "outcomes": "Outcomes",
+    "resolutionSource": "Resolution source",
+    "viewSource": "View source",
+    "resolutionRules": "Resolution rules",
+    "orderbookSoon": "Simulated trading soon — order book in Phase 5."
   },
   "orderbook": {
     "buy": "Buy",
@@ -74,7 +80,14 @@
     "translations": "Translations",
     "users": "Users",
     "audit": "Audit",
-    "settings": "Settings"
+    "settings": "Settings",
+    "publish": "Publish",
+    "table": {
+      "slug": "Slug",
+      "title": "Title",
+      "status": "Status",
+      "actions": "Actions"
+    }
   },
   "states": {
     "loading": "Loading…",
@@ -87,5 +100,15 @@
     "insufficientFunds": "Insufficient demo balance.",
     "forbidden": "You do not have permission for this action.",
     "rateLimited": "Too many attempts. Please wait a moment."
+  },
+  "marketStatus": {
+    "draft": "Draft",
+    "review": "In review",
+    "open": "Open",
+    "paused": "Paused",
+    "closed": "Closed",
+    "resolving": "Resolving",
+    "resolved": "Resolved",
+    "cancelled": "Cancelled"
   }
 }
